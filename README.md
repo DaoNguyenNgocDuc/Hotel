@@ -1,2 +1,2 @@
 # Hotel
-Hotel Management
+This is Springboot Application about Hotel Management.
