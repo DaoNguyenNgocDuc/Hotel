@@ -46,5 +46,5 @@ public interface NhanVienRepo extends JpaRepository<NhanVien, Long> {
 			+ "FROM nhan_vien nv, chuc_vu cv "
 			+ "WHERE nv.email = ?1 AND nv.id_cv = cv.id ",
 			nativeQuery = true)
-	NhanVien findNhanVienByEmail(String email);
+	Optional<NhanVien> findNhanVienByEmail(String email);
 }

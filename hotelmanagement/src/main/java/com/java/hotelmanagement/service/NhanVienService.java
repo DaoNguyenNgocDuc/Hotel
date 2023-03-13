@@ -40,6 +40,7 @@ public class NhanVienService {
 	}
 
 	public NhanVien findNhanVienByEmail(String email) {
-		return nhanVienRepo.findNhanVienByEmail(email);
+		return nhanVienRepo.findNhanVienByEmail(email)
+				.orElseThrow(() -> new EmployeeNotFoundException("Nhan vien by email " + email + " was not found"));
 	}
 }

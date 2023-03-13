@@ -55,20 +55,20 @@ public class NhanVienResouce {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
-	@PostMapping("/login")
-	public ResponseEntity<?> loginUser(@RequestBody NhanVien nhanVien) {
-		System.out.println(nhanVien.toString());
-		NhanVien checkNhanVien = nhanVienService.findNhanVienByEmail(nhanVien.getEmail());
-		if(checkNhanVien == null) {
-			System.out.println(1);
-			return new ResponseEntity<>("User not found", HttpStatus.INTERNAL_SERVER_ERROR);
-		}
-		else if (checkNhanVien.getMat_khau().equals(nhanVien.getMat_khau())) {	
-			System.out.println(2);
-			return ResponseEntity.ok(checkNhanVien);
-		}
-		System.out.println(3);
-		return new ResponseEntity<>("User not found", HttpStatus.INTERNAL_SERVER_ERROR);
-			
-	}
+//	@PostMapping("/login")
+//	public ResponseEntity<?> loginUser(@RequestBody NhanVien nhanVien) {
+//		System.out.println(nhanVien.toString());
+//		NhanVien checkNhanVien = nhanVienService.findNhanVienByEmail(nhanVien.getEmail());
+//		if(checkNhanVien == null) {
+//			System.out.println(1);
+//			return new ResponseEntity<>("User not found", HttpStatus.INTERNAL_SERVER_ERROR);
+//		}
+//		else if (checkNhanVien.getMat_khau().equals(nhanVien.getMat_khau())) {	
+//			System.out.println(2);
+//			return ResponseEntity.ok(checkNhanVien);
+//		}
+//		System.out.println(3);
+//		return new ResponseEntity<>("User not found", HttpStatus.INTERNAL_SERVER_ERROR);
+//			
+//	}
 }
